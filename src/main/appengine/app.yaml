@@ -1,0 +1,11 @@
+runtime: java
+env : flex
+inbound_services: 
+- warmup
+derived_file_type:
+- java_precompiled
+
+runtime_config: 
+  jdk: openjdk17
+
+instance_class: F1
