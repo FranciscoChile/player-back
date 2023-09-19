@@ -7,8 +7,3 @@ derived_file_type:
 
 runtime_config: 
   jdk: java17
-
-handlers:
-- url: /.*
-  script: this field is required, but ignored
-skip_files: app.yaml
