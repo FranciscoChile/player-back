@@ -6,4 +6,4 @@ derived_file_type:
 - java_precompiled
 
 runtime_config: 
-  jdk: java17
+  jdk: openjdk17
