@@ -6,7 +6,7 @@ derived_file_type:
 - java_precompiled
 
 runtime_config: 
-  jdk: java11
+  jdk: openjdk8
 
 instance_class: F1
 
