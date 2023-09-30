@@ -1,5 +1,7 @@
 package com.outbreak.web;
 
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -36,6 +38,14 @@ public class MediaStreamController {
         albumResponse.setResponseCode(HttpStatus.OK);
 
         return new ResponseEntity<>(albumResponse, albumResponse.getResponseCode());
+    }
+
+    @GetMapping("/signinurl/{name}")
+    public ResponseEntity<String> getSigninURL(@PathVariable String name) throws InvalidKeyException, NoSuchAlgorithmException {
+
+        String signinurl = mediaStreamService.getSigninURL(name);        
+
+        return new ResponseEntity<>(signinurl, HttpStatus.OK);
     }
     
 }
