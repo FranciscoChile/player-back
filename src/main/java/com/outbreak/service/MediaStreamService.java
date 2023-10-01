@@ -45,10 +45,7 @@ public class MediaStreamService {
         Date tomorrow = cal.getTime();
 
         //Key env var CDN_SIGNIN_KEY
-        System.out.println("cdnBaseUrl " + cdnBaseUrl);
-        System.out.println("cdnSigninKey " + cdnSigninKey);
-        String base64String = System.getenv(cdnSigninKey);
-        byte[] keyBytes = Base64.getUrlDecoder().decode(base64String);        
+        byte[] keyBytes = Base64.getUrlDecoder().decode(cdnSigninKey);        
 
         return signUrl(cdnBaseUrl + name , keyBytes, "outbreak-signingkey", tomorrow);
     }
