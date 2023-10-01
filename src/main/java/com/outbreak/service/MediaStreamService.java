@@ -7,7 +7,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.checkerframework.checker.units.qual.cd;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -46,6 +45,8 @@ public class MediaStreamService {
         Date tomorrow = cal.getTime();
 
         //Key env var CDN_SIGNIN_KEY
+        System.out.println("cdnBaseUrl " + cdnBaseUrl);
+        System.out.println("cdnSigninKey " + cdnSigninKey);
         String base64String = System.getenv(cdnSigninKey);
         byte[] keyBytes = Base64.getUrlDecoder().decode(base64String);        
 
